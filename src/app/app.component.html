@@ -1,1 +1,25 @@
-<app-libros></app-libros>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #menu role="navigation">
+    <p>Elemen</p>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="menu.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Libro Market</span>
+      <div>
+        <a routerLink="/registrar">Registrar</a>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/">Home</a>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
